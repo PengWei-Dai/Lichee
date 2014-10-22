@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="me.lichee.entity">
+
+    <class name="Team" table="team">
+        <id name="id" column="team_id">
+        	<generator class="native"/>
+        </id>
+         <property name="name" column="team_name" type="java.lang.String" not-null="true"/>
+         <property name="info" column="team_info" type="java.lang.String" not-null="false"/>
+         <property name="date" column="team_create" type="java.util.Date" not-null="false"/>
+         <property name="usercount" column="team_usercount" not-null="false"/>
+         <property name="classify" column="team_classify" type="java.lang.String" not-null="false"/>
+   		<set name="users" inverse="true" lazy="false" >  
+    		<key>  
+          	<column name="id" />  
+     		</key>  
+     		<one-to-many class="me.lichee.entity.User" />  
+		</set>  
+   		
+    </class>
+    
+	<!--
+		 <many-to-one name="user" 
+        class="tgh.check.model.User" 
+        column="user_id"
+        lazy="false"
+        not-null="true"/> 
+	 -->
+</hibernate-mapping>

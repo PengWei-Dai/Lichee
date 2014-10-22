@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="me.lichee.entity">
+
+    <class name="TeamApplyer" table="team_applyer">
+        <id name="id" column="applyer_id">
+        	<generator class="native"/>
+        </id>
+         <property name="name" column="applyer_name" type="java.lang.String" not-null="true"/>
+         <property name="number" column="applyer_number" type="java.lang.String" not-null="true"/>
+         <property name="school" column="applyer_school" type="java.lang.String" not-null="true"/>
+         <property name="department" column="applyer_department" type="java.lang.String" not-null="true"/>
+         
+         <property name="mail" column="applyer_mail" type="java.lang.String" not-null="true"/>
+        
+         <property name="major" column="applyer_major" type="java.lang.String" not-null="false"/>
+         <property name="phone" column="applyer_phone" type="java.lang.String" not-null="false"/>
+         <property name="like" column="applyer_like" type="java.lang.String" not-null="false"/>
+         <property name="qq" column="applyer_qq" type="java.lang.String" not-null="false"/>
+         <property name="flag" column="applyer_flag"  not-null="true"/>
+         <property name="custom1" column="applyer_custom1" type="java.lang.String" not-null="false"/>
+         <property name="custom2" column="applyer_custom2" type="java.lang.String" not-null="false"/>
+         <property name="custom3" column="applyer_custom3" type="java.lang.String" not-null="false"/>
+         
+         <many-to-one name="team" class="me.lichee.entity.Team" fetch="select" lazy="false">  
+        	<column name="team_id" />   
+		</many-to-one>  
+         
+    </class>
+    
+	<!--
+		 <many-to-one name="user" 
+        class="tgh.check.model.User" 
+        column="user_id"
+        lazy="false"
+        not-null="true"/> 
+	 -->
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="me.lichee.entity">
+
+    <class name="UserLetter" table="user_letter">
+        <id name="id" column="letter_id">
+        	<generator class="native"/>
+        </id>
+         <property name="content" type="java.lang.String" column="letter_content" not-null="false"/>
+         
+         <property name="date" type="java.util.Date" column="letter_date" not-null="false"/>
+   		<many-to-one name="user1" class="me.lichee.entity.User" fetch="select" lazy="false">  
+        	<column name="user_id1" />   
+		</many-to-one>  
+		<many-to-one name="user2" class="me.lichee.entity.User" fetch="select" lazy="false">  
+        	<column name="user_id2" />   
+		</many-to-one>  
+   		
+    </class>
+    
+	<!--
+		 <many-to-one name="user" 
+        class="tgh.check.model.User" 
+        column="user_id"
+        lazy="false"
+        not-null="true"/> 
+	 -->
+</hibernate-mapping>

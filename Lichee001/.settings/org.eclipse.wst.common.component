@@ -2,8 +2,7 @@
     <wb-module deploy-name="Lichee001">
         <wb-resource deploy-path="/" source-path="/WebRoot" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/resource"/>
-        <property name="java-output-path" value="/Lichee001/WebRoot/WEB-INF/classes"/>
         <property name="context-root" value="Lichee001"/>
+        <property name="java-output-path" value="/Lichee001/WebRoot/WEB-INF/classes"/>
     </wb-module>
 </project-modules>

@@ -75,25 +75,29 @@
 	<!-- 定义DAO Bean-->
 	<bean id="userDao" class="me.lichee.dao.impl.UserDaoImpl">
 	
-		<!-- 注入持久化操作所需的SessionFactory -->
-		<property name="sessionFactory" ref="sessionFactory"/>
+	<!-- 注入持久化操作所需的SessionFactory -->
+	<property name="sessionFactory" ref="sessionFactory"/>
 	</bean>
 	
 	<!-- 配置一个业务逻辑组件 -->
-	<bean id="service" class=
-	"me.lichee.service.impl.ServiceImpl">
-		<!-- 注入持久化访问所需的DAO组件 -->
-		<property name="userDao" ref="userDao"/>
-	</bean>
+	<bean id="service" class="me.lichee.service.impl.RegisterServiceImpl">
+	
+	<!-- 注入持久化访问所需的DAO组件 -->
+	<property name="userDao" ref="userDao"/></bean>
 
 
 	<!-- 配置Hibernate的局部事务管理器，使用HibernateTransactionManager类 -->
 	<!-- 该类实现PlatformTransactionManager接口，是针对Hibernate的特定实现-->
-	<bean id="transactionManager" 
-		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
-		<!-- 配置HibernateTransactionManager时需要依注入SessionFactory的引用 -->
-		<property name="sessionFactory" ref="sessionFactory"/>
-	</bean>
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+	
+	<!-- 配置HibernateTransactionManager时需要依注入SessionFactory的引用 -->
+	<property name="sessionFactory" ref="sessionFactory"/></bean>
+	
+	<!--④ 定义HibernateTemplate--> 
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate" >
+	 <property name="sessionFactory" ref="sessionFactory"></property>
+	</bean> 
+	
 	<!-- 配置事务增强处理,指定事务管理器 -->
 	<tx:advice id="txAdvice" transaction-manager="transactionManager">
 		<!-- 用于配置详细的事务语义 -->
@@ -104,6 +108,7 @@
 			<tx:method name="*"/>
 		</tx:attributes>
 	</tx:advice>
+	
 	<aop:config>
 		<!-- 配置一个切入点 -->
 		<aop:pointcut id="pointcut"

@@ -17,8 +17,13 @@ Date:
 <body>
 <h3>用户注册</h3>
 <s:form action="registPro">
-	<s:textfield name="person.name" label="用户名"/>
-	<s:textfield name="person.age" label="年龄"/>
+	<s:textfield name="user.name" label="用户名"/>
+	<s:password name="user.password" label="密码"/>
+	<s:textfield name="user.number" label="xuehao"/>
+	<s:textfield name="user.partment" label="yuanxi"/>
+	<s:textfield name="user.sex" label="xingbie"/>
+	<s:textfield name="user.mail" label="youxiang" />
+	
 	<tr>
 		<td colspan="2">
 		<s:submit value="注册" theme="simple"/>

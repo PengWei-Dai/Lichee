@@ -11,7 +11,7 @@
 	<package name="xqh" extends="struts-default">
 		<!-- 定义处理用户请求的Action，指定该Action的实现类-->
 		<action name="registPro" 
-			class="me.lichee.action.RegistAction">
+			class="me.lichee.action.UserRegistAction">
 			<!-- 为两个逻辑视图配置视图页面 -->
 			<result name="error">/error.jsp</result>
 			<result name="success">/welcome.jsp</result>

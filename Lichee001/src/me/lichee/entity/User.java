@@ -14,7 +14,7 @@ public class User implements Serializable {
 	private String password;//用户的密码
 	private String school;
 	private String partment;//用户的系别
-	private int sex;//这里可能有问题 数据库里面是使用的是枚举类型
+	private String sex;//这里可能有问题 数据库里面是使用的是枚举类型
 	private String mail;
 	private byte[] head;//用户的头像
 	private Team team;//用户属于什么社团
@@ -58,10 +58,10 @@ public class User implements Serializable {
 	public void setPartment(String partment) {
 		this.partment = partment;
 	}
-	public int getSex() {
+	public String getSex() {
 		return sex;
 	}
-	public void setSex(int sex) {
+	public void setSex(String sex) {
 		this.sex = sex;
 	}
 	public String getMail() {

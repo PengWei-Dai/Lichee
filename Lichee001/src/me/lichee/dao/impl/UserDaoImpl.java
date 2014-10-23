@@ -10,10 +10,12 @@ import me.lichee.entity.Person;
 import me.lichee.entity.User;
 
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+import org.springframework.stereotype.Repository;
 /**
  * @author Rain
  *  µœ÷UserDao
  */
+@Repository
 public class UserDaoImpl extends HibernateDaoSupport implements UserDao{
 
 

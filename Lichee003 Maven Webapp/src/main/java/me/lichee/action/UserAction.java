@@ -5,44 +5,46 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 
 import me.lichee.entity.User;
-
-
 import me.lichee.service.UserService;
+
 
 import com.opensymphony.xwork2.ActionSupport;
 
-/** 
- * Struts2基于注解的Action配置
- *  ParentPackage 继承父包
- *  Namespace命名空间
- *  Results跳转页面
- *  Action访问方法
- */   
+@SuppressWarnings("serial")
 
-@Controller("userAction")
 public class UserAction extends ActionSupport{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -7562095463668924329L;
+	
 	private String name;
-	private String password;	
+	private String password;
 	private User user;
-	@Resource
-	private UserService usi;
+	
+
+	private UserService userServiceImpl;
 	
 	
-	
-	
-	@Override
-	public String execute() throws Exception {
-		
-		user=new User();	
-		user.setName(name);
-		user.setPassword(password);	
-		usi.addUser(user);
-		return SUCCESS;
+
+
+
+	public UserService getUserServiceImpl() {
+		return userServiceImpl;
 	}
+
+
+
+	public void setUserServiceImpl(UserService userServiceImpl) {
+		this.userServiceImpl = userServiceImpl;
+	}
+
+
+
+	public String addUser(){
+		user=new User();
+		user.setName("dpw1");
+		user.setPassword("dpw12");
+		userServiceImpl.addUser(user);
+		return SUCCESS;		
+	}
+	
 	
 	
 	public String getName() {
@@ -63,16 +65,9 @@ public class UserAction extends ActionSupport{
 	public void setUser(User user) {
 		this.user = user;
 	}
-	public UserService getUsi() {
-		return usi;
-	}
-	public void setUsi(UserService usi) {
-		this.usi = usi;
-	}
-	
-	
 
-	
-	
+
+
+
 	
 }

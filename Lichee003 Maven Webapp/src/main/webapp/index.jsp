@@ -7,7 +7,7 @@
 	</head>
 
 <body>
-<s:form name="userregist" method="post" action="userAction" namespace="/" > 
+<s:form method="post" action="user" namespace="/" > 
 
 
 		<s:textfield name="name"></s:textfield>

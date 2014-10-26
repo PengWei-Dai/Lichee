@@ -1,17 +1,16 @@
 package me.lichee.dao.impl;
 
-import javax.annotation.Resource;
+
 
 import org.springframework.orm.hibernate3.HibernateTemplate;
-import org.springframework.stereotype.Repository;
+
 
 import me.lichee.dao.UserDao;
 import me.lichee.entity.User;
 
-@Repository("userDaoImpl")
 public class UserDaoImpl implements UserDao {
 
-	@Resource
+
 	private HibernateTemplate hibernateTemplate;
 
 	public HibernateTemplate getHibernateTemplate() {

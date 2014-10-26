@@ -16,7 +16,7 @@
     	http://www.springframework.org/schema/tx 
     	http://www.springframework.org/schema/tx/spring-tx-3.2.xsd"
 	default-lazy-init="false">
-	
+	<!-- 
 	<mvc:annotation-driven />
 	<context:annotation-config/>
 	<context:component-scan base-package="me.lichee">
@@ -25,7 +25,7 @@
 		<context:include-filter type="annotation"
 			expression="org.springframework.web.bind.annotation.ControllerAdvice" />
 	</context:component-scan>
-
+ -->
 	<!-- 配置数据源 C3P0 -->
 	<context:property-placeholder location="classpath:jdbc.properties" />
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
@@ -86,24 +86,27 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 
-	<!-- Dao bean 
+	<!-- Dao bean -->
 	<bean id="userDaoImpl" class="me.lichee.dao.impl.UserDaoImpl">
 	   <property name="hibernateTemplate" ref="hibernateTemplate"></property>  
 	  </bean>
 
--->
 
-	<!-- Service bean 
+
+	<!-- Service bean -->
 	<bean id="userServiceImpl" class="me.lichee.service.impl.UserServiceImpl">
-	<property name="userDao" ref="userDaoImpl"></property>
+	<property name="userDaoImpl" ref="userDaoImpl"></property>
 	</bean>
--->
 
-	<!-- Action bean 
-	<bean id="/userAction" class="me.lichee.action.UserAction">
-	<property name="userService" ref="userServiceImpl"></property>
+
+	<!-- Action bean -->
+	<bean id="userAction" class="me.lichee.action.UserAction">
+	<property name="userServiceImpl" ref="userServiceImpl"></property>
+	
 	</bean>
-	-->
+	
+	
+	
 	
 	
 	

@@ -17,6 +17,7 @@ public class TestHibernate  {
 	
 	@Test
 	public void TestSave(){
+		@SuppressWarnings("resource")
 		ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 	

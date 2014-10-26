@@ -7,43 +7,51 @@ import me.lichee.dao.UserDao;
 import me.lichee.entity.User;
 import me.lichee.service.UserService;
 
-@Service("userServiceImpl")
+
 public class UserServiceImpl implements UserService{
-	@Resource
-	private UserDao userDao;
+
+	private UserDao userDaoImpl;
 	
 
 
+	public UserDao getUserDaoImpl() {
+		return userDaoImpl;
+	}
+
+	public void setUserDaoImpl(UserDao userDaoImpl) {
+		this.userDaoImpl = userDaoImpl;
+	}
+
 	public UserDao getUserDao() {
-		return userDao;
+		return userDaoImpl;
 	}
 
 	public void setUserDao(UserDao userDao) {
-		this.userDao = userDao;
+		this.userDaoImpl = userDao;
 	}
 
 	public void addUser(User u) {
-		this.userDao.addUser(u);
+		this.userDaoImpl.addUser(u);
 		
 	}
 
 	public void updateUser(User u) {
-		this.userDao.addUser(u);
+		this.userDaoImpl.addUser(u);
 		
 	}
 
 	public void deleteUser(int id) {
-		this.userDao.deleltUser(id);
+		this.userDaoImpl.deleltUser(id);
 		
 	}
 
 	public void findUser(int id) {
-		this.userDao.findUser(id);
+		this.userDaoImpl.findUser(id);
 		
 	}
 
 	public User getUserByUserId(int id) {
-		User u=userDao.getUserByUserId(id);
+		User u=userDaoImpl.getUserByUserId(id);
 		return u;
 	}
 	

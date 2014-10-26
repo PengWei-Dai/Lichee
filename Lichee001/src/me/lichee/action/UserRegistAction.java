@@ -21,6 +21,16 @@ public class UserRegistAction implements Action{
 	private String tip;
 	//系统所用的业务逻辑组件
 	private RegisterService register;
+	public RegisterService getRegister() {
+		return register;
+	}
+
+
+	public void setRegister(RegisterService register) {
+		this.register = register;
+	}
+
+
 	//设置注入业务逻辑组件所必需的setter方法
 	public void setRegisterService(RegisterService registerService){
 		this.register=register;

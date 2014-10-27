@@ -24,10 +24,7 @@ public class TestHibernate  {
 		UserService usi=(UserService) context.getBean("userServiceImpl");
 		
 		User user=new User();
-		user.setName("dpw");
-		user.setPassword("password");
-		
-		usi.addUser(user);
+
 		
 	}
 

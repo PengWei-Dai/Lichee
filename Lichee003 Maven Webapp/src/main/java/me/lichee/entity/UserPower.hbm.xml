@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="me.lichee.entity">
+
+    <class name="UserPower" table="user_power">
+        <id name="id" column="power_id">
+        	<generator class="native"/>
+        </id>
+         <property name="user"  column="power_user" not-null="false"/>
+         <property name="advice"  column="power_advice" not-null="false"/>
+         <property name="activity"  column="power_activity" not-null="false"/>
+         <property name="index"  column="power_index" not-null="false"/>
+         
+         
+		<many-to-one name="usert" class="me.lichee.entity.User" fetch="select" lazy="false">  
+        	<column name="user_id2" />   
+		</many-to-one>  
+   		
+    </class>
+    
+	<!--
+		 <many-to-one name="user" 
+        class="tgh.check.model.User" 
+        column="user_id"
+        lazy="false"
+        not-null="true"/> 
+	 -->
+</hibernate-mapping>

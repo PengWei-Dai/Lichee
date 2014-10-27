@@ -39,8 +39,8 @@ public class UserAction extends ActionSupport{
 
 	public String addUser(){
 		user=new User();
-		user.setName("dpw1");
-		user.setPassword("dpw12");
+		user.setName(name);
+		user.setPassword(password);
 		userServiceImpl.addUser(user);
 		return SUCCESS;		
 	}

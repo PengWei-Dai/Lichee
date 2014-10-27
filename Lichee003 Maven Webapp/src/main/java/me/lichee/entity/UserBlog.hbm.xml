@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="me.lichee.entity">
+
+    <class name="UserBlog" table="user_blog">
+        <id name="id" column="blog_id">
+        	<generator class="native"/>
+        </id>
+         <property name="title" type="java.lang.String" column="blog_title" not-null="true"/>
+         <property name="content" type="java.lang.String" column="blog_content" not-null="false"/>
+         <property name="date" type="java.util.Date" column="blog_date" not-null="false"/>
+         <property name="count"  column="blog_count" not-null="true"/>
+         <property name="classify" type="java.lang.String" column="blog_classify" not-null="true"/>
+         <property name="good"  column="blog_good" not-null="true"/>
+   		<many-to-one name="user" class="me.lichee.entity.User" fetch="select" lazy="false">  
+        	<column name="user_id" />   
+		</many-to-one>  
+   		
+    </class>
+    
+	<!--
+		 <many-to-one name="user" 
+        class="tgh.check.model.User" 
+        column="user_id"
+        lazy="false"
+        not-null="true"/> 
+	 -->
+</hibernate-mapping>

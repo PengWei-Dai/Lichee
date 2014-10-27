@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="me.lichee.entity">
+
+    <class name="TeamWorks" table="team_works">
+        <id name="id" column="works_id">
+        	<generator class="native"/>
+        </id>
+         <property name="name" type="java.lang.String" column="works_name" not-null="false"/>
+         <property name="content" type="java.lang.String" column="works_content" not-null="false"/>
+         <property name="image1" type="java.lang.String" column="works_image1" not-null="false"/>
+         <property name="image2" type="java.lang.String" column="works_image2" not-null="false"/>
+         <property name="date" type="java.util.Date" column="works_date" not-null="false"/>
+         
+   		<many-to-one name="team" class="me.lichee.entity.Team" fetch="select" lazy="false">  
+        	<column name="team_id" />   
+		</many-to-one>  
+   		
+    </class>
+    
+	<!--
+		 <many-to-one name="user" 
+        class="tgh.check.model.User" 
+        column="user_id"
+        lazy="false"
+        not-null="true"/> 
+	 -->
+</hibernate-mapping>

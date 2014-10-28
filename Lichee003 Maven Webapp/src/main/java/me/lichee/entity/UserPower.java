@@ -3,17 +3,17 @@ package me.lichee.entity;
 import java.io.Serializable;
 /**
  * 
- * ±¾ÀàÊÇÓÃ»§È¨ÏŞµÄÊµÌå
+ * ç”¨æˆ·çš„æƒé™
  * @author lenovo
  *
  */
 public class UserPower implements Serializable {
 	private int id;
 	private User usert;
-	private int user;//¶ÔÓÃ»§µÄ×¢²áºÍÉ¾³ıÈ¨ÏŞ
-	private int advice;//ÓÃ»§·¢±íÍ¨ÖªµÄÈ¨ÏŞ
-	private int activity;//ÓÃ»§¶ÔÎÄ¼ş²Ù×÷µÄÈ¨ÏŞ
-	private int index;//ÓÃ»§¶ÔÇ°Ì¨²Ù×÷µÄÈ¨ÏŞ
+	private int user;//åˆ›å»ºç”¨æˆ·
+	private int advice;//ç®¡ç†é€šçŸ¥
+	private int activity;//ç®¡ç†æ´»åŠ¨
+	private int index;//ç®¡ç†ä¸»é¡µ
 	public int getId() {
 		return id;
 	}

@@ -10,3 +10,25 @@ ExceptionMapping：指定异常映射。（映射一个声明异常）
 ExceptionMappings：一级声明异常的数组。
 InterceptorRef：拦截器引用。
 InterceptorRefs：拦截器引用组。
+
+
+	<list> 
+			<value>me/lichee/entity/Team.hbm.xml</value>
+			<value>me/lichee/entity/TeamActivity.hbm.xml</value> 
+			<value>me/lichee/entity/TeamApplyer.hbm.xml</value>
+			<value>me/lichee/entity/TeamImage.hbm.xml</value> 
+			<value>me/lichee/entity/TeamIndex.hbm.xml</value> 
+			<value>me/lichee/entity/TeamMessage.hbm.xml</value> 
+			<value>me/lichee/entity/TeamPoints.hbm.xml</value>
+			<value>me/lichee/entity/TeamRecruit.hbm.xml</value> 
+			<value>me/lichee/entity/TeamReply.hbm.xml</value> 
+			<value>me/lichee/entity/TeamResource.hbm.xml</value> 
+			<value>me/lichee/entity/TeamWorks.hbm.xml</value> 
+			<value>me/lichee/entity/User.hbm.xml</value> 
+			<value>me/lichee/entity/UserBlog.hbm.xml</value>
+			<value>me/lichee/entity/UserBlogComment.hbm.xml</value> 
+			<value>me/lichee/entity/UserCheck.hbm.xml</value>
+			<value>me/lichee/entity/UserImage.hbm.xml</value> 
+			<value>me/lichee/entity/UserLetter.hbm.xml</value> 
+			<value>me/lichee/entity/UserPower.hbm.xml</value> 
+			</list>

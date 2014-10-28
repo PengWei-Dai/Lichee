@@ -5,17 +5,17 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 /**
- * ²¿ÃÅÊµÌåÀà
+ * ç¤¾å›¢å®ä½“ç±»
  * @author lenovo
  *
  */
 public class Team implements Serializable {
-	private int id; //²¿ÃÅµÄid
-	private String name;//²¿ÃÅµÄÃû×Ö
-	private String info;//²¿ÃÅµÄ¼ò½é
-	private Date date;//²¿ÃÅ´´½¨µÄÊ±¼ä
-	private int usercount;//²¿ÃÅµÄÈËÊı
-	private String classify;//²¿ÃÅµÄ·ÖÀà
+	private int id; //ç¤¾å›¢çš„ä¸»é”®
+	private String name;//ç¤¾å›¢åå­—
+	private String info;//ç¤¾å›¢ç®€ä»‹
+	private Date date;//ç¤¾å›¢çš„åˆ›å»ºæ—¥æœŸ
+	private int usercount;//ç¤¾å›¢ ç”¨æˆ·æ•°é‡
+	private String classify;//ç¤¾å›¢ç±»å‹
 	private Set<User> users = new HashSet<User>();
 	
 	public Set<User> getUsers() {

@@ -4,16 +4,16 @@ import java.io.Serializable;
 import java.util.Date;
 /**
  * 
- * ±¾ÀàÊÇÓÃ»§µÄÍ¼Æ¬ÊµÌå
+ * ç”¨æˆ·ç§æœ‰çš„å›¾ç‰‡
  * @author lenovo
  *
  */
 public class UserImage implements Serializable {
 	private int id;
 	private User user;
-	private Date date;//ÕÕÆ¬ÉÏ´«µÄÊ±¼ä
-	private String res;//Í¼Æ¬µÄÂ·¾¶
-	private String name;//Í¼Æ¬µÄÃû×Ö
+	private Date date;//ä¸Šä¼ æ—¥æœŸ
+	private String res;//å›¾ç‰‡åœ°å€
+	private String name;
 	public int getId() {
 		return id;
 	}

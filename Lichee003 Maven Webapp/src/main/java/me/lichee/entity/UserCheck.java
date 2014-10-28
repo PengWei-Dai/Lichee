@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 /**
  * 
- * 本类是考勤的实体
+ * 鑰冨嫟
  * @author lenovo
  *
  */
@@ -13,7 +13,7 @@ public class UserCheck implements Serializable {
 	private User user;
 	private Date begin;
 	private Date finish;
-	private String mac;//考勤机器的mac地址
+	private String mac;//鐢ㄦ埛鑰冨嫟鐨勬満鍣ㄧ殑mac鍦板潃址
 	public int getId() {
 		return id;
 	}

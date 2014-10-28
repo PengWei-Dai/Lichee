@@ -1,19 +1,26 @@
+/**
+ * 
+ */
 package me.lichee.service.impl;
-import javax.annotation.Resource;
 
-import org.springframework.stereotype.Service;
+import java.util.List;
+
+
 
 import me.lichee.dao.UserDao;
 import me.lichee.entity.User;
+
 import me.lichee.service.UserService;
 
-
+/**
+ * @author Rain
+ *
+ */
 public class UserServiceImpl implements UserService{
 
 	private UserDao userDaoImpl;
 	
-
-
+	
 	public UserDao getUserDaoImpl() {
 		return userDaoImpl;
 	}
@@ -22,38 +29,31 @@ public class UserServiceImpl implements UserService{
 		this.userDaoImpl = userDaoImpl;
 	}
 
-	public UserDao getUserDao() {
-		return userDaoImpl;
-	}
-
-	public void setUserDao(UserDao userDao) {
-		this.userDaoImpl = userDao;
-	}
-
-	public void addUser(User u) {
-		this.userDaoImpl.addUser(u);
+	public void addUser(User user) {
+		// TODO Auto-generated method stub
 		
 	}
 
-	public void updateUser(User u) {
-		this.userDaoImpl.addUser(u);
-		
+	public User findUser(User user) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	public void deleteUser(int id) {
-		this.userDaoImpl.deleltUser(id);
-		
+	public User findUserByMail(String userMail){
+		List<User> users=userDaoImpl.findUserByHql("From User u where u.mail=?",userMail);	
+		if(users.size()>0){
+			return users.get(0);
+		}
+		else return null;
 	}
 
-	public void findUser(int id) {
-		this.userDaoImpl.findUser(id);
-		
+
+
+	public List<User> findUserByHql(String hql, Object obj) {
+		List<User> users=userDaoImpl.findUserByHql(hql, obj);
+		return users;
 	}
 
-	public User getUserByUserId(int id) {
-		User u=userDaoImpl.getUserByUserId(id);
-		return u;
-	}
 	
 	
 }

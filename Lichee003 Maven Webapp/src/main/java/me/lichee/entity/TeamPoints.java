@@ -3,7 +3,7 @@ package me.lichee.entity;
 import java.io.Serializable;
 /**
  * 
- * ±¾ÀàÊÇÉçÍÅµÄ»ı·ÖÊµÌå
+ * ç¤¾å›¢çš„ç§¯åˆ†
  * @author lenovo
  *
  */

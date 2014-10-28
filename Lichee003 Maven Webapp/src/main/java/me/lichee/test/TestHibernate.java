@@ -24,7 +24,12 @@ public class TestHibernate  {
 		UserService usi=(UserService) context.getBean("userServiceImpl");
 		
 		User user=new User();
-
+		user.setName("admin");
+		user.setPassword("admin");
+		user.setNumber("12101010703");
+		user.setPartment("JIKE");
+		user.setSex(0);
+		user.setMail("1039895299@qq.com");
 		
 	}
 

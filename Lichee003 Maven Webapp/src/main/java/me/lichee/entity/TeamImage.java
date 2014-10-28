@@ -3,10 +3,16 @@ package me.lichee.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * 
+ * 鍥㈤槦鍥剧墖
+ * @author lenovo
+ *
+ */
 public class TeamImage implements Serializable {
 	private int id;
 	private Team team;
-	private String res;//文件的目录
+	private String res;//鍥剧墖鐨勮矾寰勫湴鍧�
 	private Date date;
 	public int getId() {
 		return id;

@@ -4,16 +4,16 @@ import java.io.Serializable;
 import java.util.Date;
 /**
  * 
- * 本类是留言类
+ * 绀惧洟閫氱煡
  * @author lenovo
  *
  */
 public class TeamMessage implements Serializable {
 	private int id;
 	private Team team;
-	private String ip;//留言用户的ip
-	private Date date;//留言的时间
-	private String content;//留言的内容
+	private String ip;//鍙戝嚭閫氱煡鐨勭敤鎴穒d
+	private Date date;//鍙戝嚭鏃堕棿
+	private String content;//閫氱煡绫诲
 	public int getId() {
 		return id;
 	}

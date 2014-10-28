@@ -7,24 +7,25 @@
 
     <class name="User" table="user">
         <id name="id" column="user_id">
-        	<generator class="increment"/>
+        	<generator class="native"/>
         </id>
          <property name="name" column="user_name" type="java.lang.String" not-null="true"/>
          <property name="number" column="user_number" type="java.lang.String" not-null="true"/>
          <property name="password" column="user_password" type="java.lang.String" not-null="true"/>
          <property name="school" column="user_school" type="java.lang.String" not-null="true"/>
          <property name="partment" column="user_partment" type="java.lang.String" not-null="true"/>
-         <property name="sex" column="user_sex"  type="java.lang.String" not-null="true"/>
+         <property name="sex" column="user_sex"  not-null="true"/>
          <property name="mail" column="user_mail" type="java.lang.String" not-null="true"/>
          <property name="head" column="user_head" not-null="false"/>
          <property name="major" column="user_major" type="java.lang.String" not-null="false"/>
          <property name="phone" column="user_phone" type="java.lang.String" not-null="false"/>
          <property name="like" column="user_like" type="java.lang.String" not-null="false"/>
          <property name="qq" column="user_qq" type="java.lang.String" not-null="false"/>
+        <!-- 
          <many-to-one name="team" class="me.lichee.entity.Team" fetch="select" lazy="false">  
         	<column name="team_id" />   
 		</many-to-one>  
-         
+          -->
     </class>
     
 	<!--

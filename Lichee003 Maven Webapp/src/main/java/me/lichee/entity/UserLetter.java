@@ -4,14 +4,14 @@ import java.io.Serializable;
 import java.util.Date;
 /**
  * 
- * ±¾ÀàÊÇÓÃ»§µÄË½ĞÄĞÅÊµÌå
+ * ç”¨æˆ·é—´çš„ç§ä¿¡
  * @author lenovo
  *
  */
 public class UserLetter implements Serializable {
 	private int id;
-	private User user1;//·¢ËÍ·½
-	private User user2;//½ÓÊÕ·½
+	private User user1;//å‘é€ç”¨æˆ·
+	private User user2;//æ¥æ”¶ç”¨æˆ·
 	private String content;
 	private Date date;
 	public int getId() {

@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 /**
  * 
- * ±¾ÀàÊÇÓÃ»§²©¿ÍµÄÆÀÂÛ
+ * åšå®¢çš„è¯„è®º
  * @author lenovo
  *
  */

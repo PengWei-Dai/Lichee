@@ -3,22 +3,22 @@ package me.lichee.entity;
 import java.io.Serializable;
 /**
  * 
- * ÓÃ»§ÊµÌå
+ * ç”¨æˆ·
  * @author lenovo
  *
  */
 public class User implements Serializable {
-	private int id;//ÓÃ»§µÄid
-	private String name;//ÓÃ»§µÄÃû×Ö
-	private String number;//ÓÃ»§µÄÑ§ºÅ
-	private String password;//ÓÃ»§µÄÃÜÂë
+	private int id;//ä¸»é”®
+	private String name;//åå­—
+	private String number;//å­¦å·
+	private String password;//å¯†ç 
 	private String school;
-	private String partment;//ÓÃ»§µÄÏµ±ğ
-	private String sex;//ÕâÀï¿ÉÄÜÓĞÎÊÌâ Êı¾İ¿âÀïÃæÊÇÊ¹ÓÃµÄÊÇÃ¶¾ÙÀàĞÍ
+	private String partment;//å­¦é™¢
+	private int sex;//æ€§åˆ«
 	private String mail;
-	private byte[] head;//ÓÃ»§µÄÍ·Ïñ
-	private Team team;//ÓÃ»§ÊôÓÚÊ²Ã´ÉçÍÅ
-	private String major;//ÓÃ»§µÄ×¨Òµ
+	private byte[] head;//å¤´åƒ
+	//private Team team;//æ‰€å±ç¤¾å›¢
+	private String major;//ä¸“ä¸š
 	private String phone;
 	private String like;
 	private String qq;
@@ -58,10 +58,10 @@ public class User implements Serializable {
 	public void setPartment(String partment) {
 		this.partment = partment;
 	}
-	public String getSex() {
+	public int getSex() {
 		return sex;
 	}
-	public void setSex(String sex) {
+	public void setSex(int sex) {
 		this.sex = sex;
 	}
 	public String getMail() {
@@ -76,12 +76,12 @@ public class User implements Serializable {
 	public void setHead(byte[] head) {
 		this.head = head;
 	}
-	public Team getTeam() {
-		return team;
-	}
-	public void setTeam(Team team) {
-		this.team = team;
-	}
+//	public Team getTeam() {
+//		return team;
+//	}
+//	public void setTeam(Team team) {
+//		this.team = team;
+//	}
 	public String getMajor() {
 		return major;
 	}

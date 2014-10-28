@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 /**
  * 
- * 本类是团队资源的实体类
+ * 绀惧洟璧勬簮
  * 
  * @author lenovo
  *

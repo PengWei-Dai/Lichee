@@ -3,23 +3,23 @@ package me.lichee.entity;
 import java.io.Serializable;
 /**
  * 
- * ÉêÇëÈËÊµÌåÀà
+ * ç”³è¯·åŠ å…¥ç¤¾å›¢çš„ç”¨æˆ·ä¿¡æ¯
  * @author lenovo
  *
  */
 public class TeamApplyer implements Serializable {
 	private int id;
 	private String name;
-	private String number;//Ñ§ºÅ
+	private String number;//å­¦å·
 	private String mail;
 	private String school;
-	private String department;   //ÔºÏµ
+	private String department;
 	private String major;
 	private String phone;
 	private String qq;
 	private String like;
 	private int flag;
-	private String custom1;   //×Ô¶¨ĞÅÏ¢1
+	private String custom1;
 	private String custom2;
 	private String custom3;
 	private Team team;

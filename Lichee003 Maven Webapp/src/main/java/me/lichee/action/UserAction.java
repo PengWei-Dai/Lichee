@@ -1,9 +1,5 @@
 package me.lichee.action;
 
-import javax.annotation.Resource;
-
-import org.springframework.stereotype.Controller;
-
 import me.lichee.entity.User;
 import me.lichee.service.UserService;
 

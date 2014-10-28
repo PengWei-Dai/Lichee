@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 /**
  * 
- * ±¾ÀàÊÇÓÃ»§µÄ²©¿ÍÊµÀı
+ * ç”¨æˆ·å‘çš„åšå®¢
  * @author lenovo
  *
  */
@@ -14,9 +14,9 @@ public class UserBlog implements Serializable {
 	private String title;
 	private String content;
 	private Date date;
-	private int count;//µã»÷Á¿
+	private int count;//ç‚¹å‡»é‡
 	private String classify;
-	private int good;//²©¿ÍÊÇ·ñ¼Ó¾«
+	private int good;//æ˜¯å¦åŠ ç²¾
 	public int getId() {
 		return id;
 	}

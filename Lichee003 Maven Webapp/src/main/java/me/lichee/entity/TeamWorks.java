@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 /**
  * 
- * 本类是社团的作品实体
+ * 绀惧洟浣滃搧
  * @author lenovo
  *
  */

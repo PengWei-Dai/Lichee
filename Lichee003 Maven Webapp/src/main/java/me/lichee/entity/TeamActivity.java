@@ -3,17 +3,17 @@ package me.lichee.entity;
 import java.io.Serializable;
 import java.util.Date;
 /**
- * ÉçÍÅµÄ»î¶¯ÊµÌå
+ * ç¤¾å›¢æ´»åŠ¨å®ä½“
  * @author lenovo
  *
  */
 public class TeamActivity implements Serializable {
-	private int id; //»î¶¯id
-	private Team team;//»î¶¯ÊôÓÚÄÄ¸öÉçÍÅ
-	private User user;//ÊÇÄÇ¸öÓÃ»§·¢µÄÍ¨Öª
-	private String title;//»î¶¯µÄ±êÌâ
-	private String content;//»î¶¯µÄ¾ßÌåÄÚÈİ
-	private Date date;//»î¶¯µÄ·¢²¼Ê±¼ä
+	private int id; //ä¸»é”®
+	private Team team;//æ‰€å±ç¤¾å›¢
+	private User user;//å‘èµ·ç¤¾å›¢æ´»åŠ¨çš„ç”¨æˆ·Öª
+	private String title;//æ´»åŠ¨çš„æ ‡é¢˜
+	private String content;//æ´»åŠ¨ç±»å®¹
+	private Date date;//æ´»åŠ¨å‘èµ·æ—¥æœŸ
 	public int getId() {
 		return id;
 	}

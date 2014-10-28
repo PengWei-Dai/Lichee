@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 /**
  * 
- * 本类是回复留言的实体类
+ * 鐣欒█鍥炲
  * 
  * @author lenovo
  *

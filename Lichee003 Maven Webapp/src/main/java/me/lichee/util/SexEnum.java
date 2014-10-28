@@ -1,5 +1,5 @@
 package me.lichee.util;
 
 public enum SexEnum {
-	ÄÐ,Å®;
+	ç”·,å¥³;
 }

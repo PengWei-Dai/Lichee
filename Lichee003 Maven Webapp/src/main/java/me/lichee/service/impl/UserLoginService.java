@@ -20,12 +20,15 @@ public class UserLoginService {
 	
 
 	
-	public boolean isExistUser(String userMail , String userPasswrod) throws UserLoginException{
+	public boolean isExistUser(String userMail , String userPassword) throws UserLoginException{
+		//此处为实验打印
+		System.out.println(userMail);
+		System.out.println(userPassword);
 		
 		User user=getUserServiceImpl().findUserByMail(userMail);
 		
 		if(user != null ){
-			if(user.getPassword().equals(userPasswrod)){
+			if(user.getPassword().equals(userPassword)){
 				return true;
 			}
 			else new UserLoginException("密码错误！") ;

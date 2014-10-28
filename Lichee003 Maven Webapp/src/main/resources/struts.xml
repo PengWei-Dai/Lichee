@@ -4,9 +4,9 @@
 <constant name="struts.il8n.encoding" value="utf-8"></constant>	<!-- 中文乱码问题   -->
 	
 	<package name="test" extends="struts-default" namespace="/"> <!-- 根据结果 跳转页面 -->
-		<action name="user" class="userAction" method="addUser">
-			<result name="success">/view/ok.jsp</result>
-			<result name="error">/view/not.jsp</result>
+		<action name="userLoginAction" class="userLoginAction" method="execute">
+			<result name="success">/test/ok.jsp</result>
+			<result name="error">/test/not.jsp</result>
 		</action>
 		
 		<!-- 

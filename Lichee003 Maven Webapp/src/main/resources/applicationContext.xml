@@ -101,13 +101,12 @@
 	
 
 
-	<!-- Action bean
-	<bean id="userAction" class="me.lichee.action.UserAction">
-		<property name="userServiceImpl" ref="userServiceImpl"></property>
-
+	<!-- Action bean -->
+	<bean id="userLoginAction" class="me.lichee.action.UserLoginAction">
+		<property name="userLoginService" ref="userLoginService"></property>
 	</bean>
 
- -->
+
 
 
 

@@ -17,9 +17,6 @@ public class UserAction extends ActionSupport{
 
 	private UserService userServiceImpl;
 	
-	
-
-
 
 	public UserService getUserServiceImpl() {
 		return userServiceImpl;

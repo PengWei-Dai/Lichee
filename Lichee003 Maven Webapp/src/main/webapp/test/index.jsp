@@ -7,11 +7,11 @@
 	</head>
 
 <body>
-<s:form method="post" action="user" namespace="/" > 
+<s:form method="post" action="userLoginAction" namespace="/" > 
 
 
-		<s:textfield name="name"></s:textfield>
-		<s:password name="password"></s:password>
+		<s:textfield name="userMail"></s:textfield>
+		<s:password name="userPassword"></s:password>
 		<s:submit name="submit"></s:submit>
 		
 		</s:form>

@@ -58,6 +58,7 @@
 		<property name="mappingResources"> 
 			<list> 		
 				<value>me/lichee/entity/User.hbm.xml</value> 
+				<value>me/lichee/entity/Team.hbm.xml</value>
 			</list>
 		</property> 			
 		<property name="hibernateProperties">
@@ -84,6 +85,9 @@
 
 	<!-- Dao bean -->
 	<bean id="userDaoImpl" class="me.lichee.dao.impl.UserDaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"></property>
+	</bean>
+	<bean id="teamDaoImpl" class="me.lichee.dao.impl.TeamDaoImpl">
 		<property name="hibernateTemplate" ref="hibernateTemplate"></property>
 	</bean>
 	

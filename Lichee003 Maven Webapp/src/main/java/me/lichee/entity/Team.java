@@ -10,6 +10,8 @@ import java.util.Set;
  *
  */
 public class Team implements Serializable {
+	private static final long serialVersionUID = -5701430868397002876L;
+	
 	private int id; //社团的主键
 	private String name;//社团名字
 	private String info;//社团简介

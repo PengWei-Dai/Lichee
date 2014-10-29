@@ -21,11 +21,11 @@
          <property name="phone" column="user_phone" type="java.lang.String" not-null="false"/>
          <property name="like" column="user_like" type="java.lang.String" not-null="false"/>
          <property name="qq" column="user_qq" type="java.lang.String" not-null="false"/>
-        <!-- 
+        <!-- -->
          <many-to-one name="team" class="me.lichee.entity.Team" fetch="select" lazy="false">  
         	<column name="team_id" />   
 		</many-to-one>  
-          -->
+          
     </class>
     
 	<!--

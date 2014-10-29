@@ -8,6 +8,7 @@ import java.io.Serializable;
  *
  */
 public class User implements Serializable {
+	private static final long serialVersionUID = -8047953668531995096L;
 	private int id;//主键
 	private String name;//名字
 	private String number;//学号
@@ -17,7 +18,7 @@ public class User implements Serializable {
 	private int sex;//性别
 	private String mail;
 	private byte[] head;//头像
-	//private Team team;//所属社团
+	private Team team;//所属社团
 	private String major;//专业
 	private String phone;
 	private String like;
@@ -76,12 +77,12 @@ public class User implements Serializable {
 	public void setHead(byte[] head) {
 		this.head = head;
 	}
-//	public Team getTeam() {
-//		return team;
-//	}
-//	public void setTeam(Team team) {
-//		this.team = team;
-//	}
+	public Team getTeam() {
+		return team;
+	}
+	public void setTeam(Team team) {
+		this.team = team;
+	}
 	public String getMajor() {
 		return major;
 	}

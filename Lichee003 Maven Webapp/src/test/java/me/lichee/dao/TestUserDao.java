@@ -24,7 +24,7 @@ public class TestUserDao {
 		User user=new User();
 		user.setName("admin");
 		user.setPassword("admin");
-		user.setNumber("12101010706");
+		user.setNumber("12101010702");
 		user.setPartment("JIKE");
 		user.setSex(0);
 		user.setMail("admin@qq.com");

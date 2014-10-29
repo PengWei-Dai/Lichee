@@ -49,6 +49,13 @@
 		<artifactId>aspectjweaver</artifactId>
 		<version>1.7.4</version>
 	</dependency>
+	
+	<dependency>
+	<groupId>org.springframework.security</groupId>
+	<artifactId>spring-security-core</artifactId>
+	<version>3.1.0.RELEASE</version>
+</dependency>
+
 	 <!-- spring -->
 	 <!-- hibernate -->
 	 <dependency>
@@ -116,7 +123,11 @@
       <version>4.10</version>
       <scope>test</scope>
     </dependency>
-
+<dependency>
+	<groupId>org.slf4j</groupId>
+	<artifactId>slf4j-api</artifactId>
+	<version>1.6.1</version>
+</dependency>
   <!-- mysql -->
 	<dependency>
 		<groupId>mysql</groupId>

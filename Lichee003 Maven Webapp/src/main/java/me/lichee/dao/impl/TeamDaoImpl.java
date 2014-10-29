@@ -14,13 +14,11 @@ import me.lichee.entity.Team;
  * @author Rain
  * Team's Dao Implements
  */
-public class TeamDaoImpl implements TeamDao{
+public class TeamDaoImpl extends BaseDaoImpl<Team> implements TeamDao{
 
 	private HibernateTemplate hibernateTemplate;
 	
-	public Team findTeam(Team team) {
-		return (Team) this.getHibernateTemplate().findByExample(team);
-	}
+
 
 	public Team findTeamById(int id) {
 		Team team=(Team)this.getHibernateTemplate().get(Team.class, id);
@@ -39,14 +37,8 @@ public class TeamDaoImpl implements TeamDao{
 		return teams;
 	}
 
-	public void saveTeam(Team team) {
-		this.getHibernateTemplate().save(team);
-		
-	}
 
-	public void updateTeam(Team team) {
-		this.getHibernateTemplate().update(team);
-	}
+
 
 	public void updateTeamByHql(String hql, Object obj) {
 		this.getHibernateTemplate().update(
@@ -54,9 +46,7 @@ public class TeamDaoImpl implements TeamDao{
 				);		
 	}
 
-	public void deleteTeam(Team team) {
-		this.getHibernateTemplate().delete(team);	
-	}
+
 
 	public void deleteTeamByHql(String hql, Object obj) {
 		this.getHibernateTemplate().delete(

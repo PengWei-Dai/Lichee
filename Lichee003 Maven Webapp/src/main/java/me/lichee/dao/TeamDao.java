@@ -11,12 +11,12 @@ import me.lichee.entity.Team;
  * @author Rain
  * Team's CUDR
  */
-public interface TeamDao {
+public interface TeamDao extends BaseDao<Team>{
 	
 	/*
 	 * find
 	 */
-	public Team findTeam(Team team);
+
 	
 	public Team findTeamById(int id);
 	
@@ -28,19 +28,19 @@ public interface TeamDao {
 	 * save
 	 */
 	
-	public void saveTeam(Team team);
+
 	
 	/*
 	 * update
 	 */
-	public void updateTeam(Team team);
+
 	
 	public void updateTeamByHql(String hql , Object obj);
 	
 	/*
 	 * delete
 	 */
-	public void deleteTeam(Team team);
+
 	
 	public void deleteTeamByHql(String hql ,Object obj);
 	

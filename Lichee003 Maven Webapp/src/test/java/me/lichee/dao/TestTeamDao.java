@@ -24,11 +24,26 @@ public class TestTeamDao {
 		TeamDao test =(TeamDao)con.getBean("teamDaoImpl");
 		
 		Team suse=new Team();
-		suse.setName("suse2");
-		test.saveTeam(suse);
+		suse.setName("suse55");
+		test.saveEntity(suse);
 		
 		
 
 	}
+	
+	
+	@Test
+	public void testBaseDao() {
+		ApplicationContext con=new ClassPathXmlApplicationContext("applicationContext.xml");
+		BaseDao test =(BaseDao)con.getBean("baseDaoImpl");
+		
+		Team suse=new Team();
+		suse.setName("suse3");
+		test.saveEntity(suse);
+		
+		
+
+	}
+
 
 }

@@ -6,20 +6,10 @@ import java.util.List;
 
 import org.springframework.orm.hibernate3.HibernateTemplate;
 
-
-
-
-
-
-
-
-
-
-
 import me.lichee.dao.UserDao;
 import me.lichee.entity.User;
 
-public class UserDaoImpl  implements UserDao {
+public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
 
 
 	private HibernateTemplate hibernateTemplate;
@@ -33,9 +23,7 @@ public class UserDaoImpl  implements UserDao {
 		return user;
 	}
 
-	public User findUser(User user) {	
-		return 	(User) this.getHibernateTemplate().findByExample(user);		
-	}
+
 	
 	
 	@SuppressWarnings("unchecked")
@@ -59,18 +47,13 @@ public class UserDaoImpl  implements UserDao {
 	 * 添加User
 	 * @see me.lichee.dao.UserDao#addUser(me.lichee.entity.User)
 	 */
-	public void addUser(User user) {
-		this.getHibernateTemplate().save(user);
-	}
 
 
 	/*
 	 * 删除User
 	 * @see me.lichee.dao.UserDao#deleltUser(me.lichee.entity.User)
 	 */
-	public void deleltUser(User user) {
-		this.getHibernateTemplate().delete(user);
-	}
+
 
 
 
@@ -100,9 +83,6 @@ public class UserDaoImpl  implements UserDao {
 	 * 更新User
 	 * @see me.lichee.dao.UserDao#updateUser(me.lichee.entity.User)
 	 */
-	public void updateUser(User user) {
-		this.getHibernateTemplate().update(user);
-	}
 
 	public HibernateTemplate getHibernateTemplate() {
 		return hibernateTemplate;

@@ -4,14 +4,12 @@ import java.util.List;
 
 import me.lichee.entity.User;
 
-public interface UserDao {
+public interface UserDao extends BaseDao<User>{
 	
 	/**
 	 * 查找
 	 */
 	public User findUserById(int id);
-	
-	public User findUser(User user);
 	
 	public List<User> findUserAll();
 	
@@ -21,14 +19,13 @@ public interface UserDao {
 	 * 增加
 	 */
 	
-	
-	public void addUser(User user);
+
 	
 	/**
 	 * 删除
 	 */
 	
-	public void deleltUser(User user);
+
 	
 	public void deleltUserById(int id);
 	
@@ -41,7 +38,7 @@ public interface UserDao {
 	/*
 	 * 更新
 	 */
-	public void updateUser(User user);
+
 	
 	//public void updateUserByHql(String hql);
 

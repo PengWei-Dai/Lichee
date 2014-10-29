@@ -24,12 +24,12 @@ public class TestUserDao {
 		User user=new User();
 		user.setName("admin");
 		user.setPassword("admin");
-		user.setNumber("12101010702");
+		user.setNumber("12101010703");
 		user.setPartment("JIKE");
 		user.setSex(0);
 		user.setMail("admin@qq.com");
 		user.setSchool("suse");
-		userdao.addUser(user);
+		userdao.saveEntity(user);
 	}
 	
 	
@@ -75,7 +75,7 @@ public class TestUserDao {
 		User u=userdao.findUserById(1);
 		u.setName("dpw");
 		
-		userdao.updateUser(u);
+		userdao.updateEntity(u);
 		
 		
 	}

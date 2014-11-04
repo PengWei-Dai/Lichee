@@ -13,9 +13,12 @@ public class User implements Serializable {
 	private String name;//名字
 	private String number;//学号
 	private String password;//密码
+	 //约定权限名称
+	//系统管理员、管理员（team管理员）、负责人、用户
+	private String power;    
 	private String school;
 	private String partment;//学院
-	private int sex;//性别
+	private String sex;//性别
 	private String mail;
 	private byte[] head;//头像
 	private Team team;//所属社团
@@ -23,6 +26,7 @@ public class User implements Serializable {
 	private String phone;
 	private String like;
 	private String qq;
+	
 	public int getId() {
 		return id;
 	}
@@ -59,10 +63,10 @@ public class User implements Serializable {
 	public void setPartment(String partment) {
 		this.partment = partment;
 	}
-	public int getSex() {
+	public String getSex() {
 		return sex;
 	}
-	public void setSex(int sex) {
+	public void setSex(String sex) {
 		this.sex = sex;
 	}
 	public String getMail() {
@@ -107,6 +111,13 @@ public class User implements Serializable {
 	public void setQq(String qq) {
 		this.qq = qq;
 	}
+	public String getPower() {
+		return power;
+	}
+	public void setPower(String power) {
+		this.power = power;
+	}
+
 	
 	
 }

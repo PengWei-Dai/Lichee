@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:util="http://www.springframework.org/schema/util" xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/aop
 		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
 		http://www.springframework.org/schema/mvc
@@ -16,6 +19,8 @@
     	http://www.springframework.org/schema/tx 
     	http://www.springframework.org/schema/tx/spring-tx-3.2.xsd"
 	default-lazy-init="false">
+	
+	
 	<!-- <mvc:annotation-driven /> <context:annotation-config/> <context:component-scan 
 		base-package="me.lichee"> <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" 
 		/> <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice" 
@@ -24,7 +29,8 @@
 		
 	<!-- 配置数据源 C3P0 -->
 	<context:property-placeholder location="classpath:jdbc.properties" />
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+	<bean id="dataSource"
+		class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
 		<property name="driverClass" value="${db.driverClassName}" />
 		<property name="jdbcUrl" value="${db.url}" />
@@ -48,17 +54,14 @@
 			false -->
 		<property name="breakAfterAcquireFailure" value="false" />
 	</bean>
-
-
-
-	<!--定义Hibernate的SessionFactory -->
-	<!-- 指定了Hibernate的映射文件和配置信息 -->
-	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />	
 		<property name="mappingResources"> 
 			<list> 		
 				<value>me/lichee/entity/User.hbm.xml</value> 
 				<value>me/lichee/entity/Team.hbm.xml</value>
+				
 			</list>
 		</property> 			
 		<property name="hibernateProperties">
@@ -71,6 +74,13 @@
 			</props>
 		</property>
 	</bean>
+	
+
+
+
+	<!--定义Hibernate的SessionFactory -->
+	<!-- 指定了Hibernate的映射文件和配置信息 -->
+	
 
 	<!--事务管理 -->
 	<bean id="transactionManager"
@@ -82,9 +92,9 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
-
-	<!-- Dao bean -->
-	
+	<!-- ===================================================== -->
+						<!-- Dao bean -->
+						
 	<bean id="baseDaoImpl" 	   class="me.lichee.dao.impl.BaseDaoImpl">
 		<property name="hibernateTemplate" ref="hibernateTemplate"></property>
 	</bean>	
@@ -95,29 +105,32 @@
 		<property name="hibernateTemplate" ref="hibernateTemplate"></property>
 	</bean>
 	
-
-
-	<!-- Service bean -->
+	<!-- ===================================================== -->
+					<!-- Service bean -->
+					
+	<bean id="baseServiceImpl" class="me.lichee.service.impl.BaseServiceImpl">
+		<property name="baseDaoImpl" ref="baseDaoImpl"></property>
+	</bean>
 	<bean id="userServiceImpl" class="me.lichee.service.impl.UserServiceImpl">
 		<property name="userDaoImpl" ref="userDaoImpl"></property>
 	</bean>
-	<bean id="userLoginService" class="me.lichee.service.impl.UserLoginService">
+	<bean id="teamServiceImpl" class="me.lichee.service.impl.TeamServiceImpl">
+		<property name="teamDaoImpl" ref="teamDaoImpl"></property>
+	</bean>
+	
+	
+	<!-- ===================================================== -->
+					<!-- Action bean -->
+	
+	<bean id="userAction" class="me.lichee.action.UserAction" scope="prototype">
 		<property name="userServiceImpl" ref="userServiceImpl"></property>
 	</bean>
-	
-	
-	
-
-
-	<!-- Action bean -->
-	<bean id="userLoginAction" class="me.lichee.action.UserLoginAction">
-		<property name="userLoginService" ref="userLoginService"></property>
-	</bean>
 
 
 
 
 
+	<!-- ===================================================== -->
 
 	<!-- REQUIRED：支持当前事务，如果当前没有事务，就新建一个事务。这是最常见的选择。 SUPPORTS：支持当前事务，如果当前没有事务，就以非事务方式执行。 
 		MANDATORY：支持当前事务，如果当前没有事务，就抛出异常。 REQUIRES_NEW：新建事务，如果当前存在事务，把当前事务挂起。 NOT_SUPPORTED：以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。 
@@ -141,4 +154,5 @@
 	
 
 
+	
 </beans>

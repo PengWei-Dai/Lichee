@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="GBK" ?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
-<constant name="struts.il8n.encoding" value="utf-8"></constant>	<!-- 中文乱码问题   -->
-	
-	<package name="test" extends="struts-default" namespace="/"> <!-- 根据结果 跳转页面 -->
-		<action name="userLoginAction" class="userLoginAction" method="execute">
+	<constant name="struts.il8n.encoding" value="utf-8"></constant>	<!-- 中文乱码问题 -->
+	<!-- 声明为开发模式 -->
+	<constant name="struts.devMode"  value="true"/>
+
+
+	<package name="lichee" extends="struts-default" > <!-- 根据结果 跳转页面 -->
+		<action name="userLoginAction" class="userAction" method="LoginUser">
 			<result name="success">/test/ok.jsp</result>
-			<result name="error">/test/not.jsp</result>
+			<result name="input">/test/index.jsp</result>
 		</action>
-		
-		<!-- 
-		<action name="atmAction_update" class="test" method="update">
-			<result name="success">/view/ok.jsp</result>
-			<result name="error">/view/not.jsp</result>
-		</action>
-		
-		 -->
+
+		<!-- <action name="atmAction_update" class="test" method="update"> <result 
+			name="success">/view/ok.jsp</result> <result name="error">/view/not.jsp</result> 
+			</action> -->
 	</package>
-	
+
 </struts>    

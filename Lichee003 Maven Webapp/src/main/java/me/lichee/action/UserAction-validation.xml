@@ -1,0 +1,20 @@
+<!DOCTYPE validators PUBLIC
+        "-//OpenSymphony Group//XWork Validator 1.0.3//EN"
+        "http://www.opensymphony.com/xwork/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="userName">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入用户名</message>
+		</field-validator>
+	</field>
+	
+	<field name="userPassword">
+		<field-validator type="requiredstring">
+			<param name="min">6</param>
+			<param name="min">10</param>
+			<message>必须在长度是6~10之间</message>
+		</field-validator>
+	</field>
+</validators>

@@ -14,7 +14,8 @@
          <property name="password" column="user_password" type="java.lang.String" not-null="true"/>
          <property name="school" column="user_school" type="java.lang.String" not-null="true"/>
          <property name="partment" column="user_partment" type="java.lang.String" not-null="true"/>
-         <property name="sex" column="user_sex"  not-null="true"/>
+         <property name="sex" column="user_sex" type="java.lang.String" not-null="true"/>
+         <property name="power" column="user_power"  type="java.lang.String" not-null="true"></property>
          <property name="mail" column="user_mail" type="java.lang.String" not-null="true"/>
          <property name="head" column="user_head" not-null="false"/>
          <property name="major" column="user_major" type="java.lang.String" not-null="false"/>

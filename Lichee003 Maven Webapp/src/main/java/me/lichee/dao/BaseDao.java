@@ -7,7 +7,7 @@ public interface BaseDao<T> {
 	 * 查找
 	 */
 	
-	public T findEntity(T entity);
+	public T findEntity(String hql , Object args);
 
 	/*
 	 * 增加
@@ -21,7 +21,6 @@ public interface BaseDao<T> {
 	 */
 	
 	public void deleltEntity(T entity);
-	
 	
 	/*
 	 * 更新

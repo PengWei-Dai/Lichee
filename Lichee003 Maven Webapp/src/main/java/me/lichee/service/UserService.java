@@ -9,21 +9,10 @@ import me.lichee.entity.User;
 
 /**
  * @author Rain
- *
+ * 继承基础Dao的CURD方法
  */
-public interface UserService {
-	
-	/*
-	 * 添加User
-	 */
-	public void addUser(User user);
-	
-	/*
-	 * 查找User
-	 */
-	public User findUser(User user);
-	
-	public List<User> findUserByHql(String hql , Object obj);
+public interface UserService extends BaseService<User>{
 	
 	
+
 }
